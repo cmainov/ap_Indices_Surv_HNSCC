@@ -578,6 +578,7 @@ comb.obs<-list()
 comb.weight.stats<-list()
 comb.weight.boxp<-list()
 comb.surv.data<-list()
+comb.surv.plots<-list()
 for (i in (1:length(cut.names_b))){
   comb.results[[i]]<-msm.func(diet.cut.var=cut.names_b[i],diet.cut.var_001=cut.names_001[i],
                               diet.cut.var_002=cut.names_002[i],
@@ -606,6 +607,12 @@ for (i in (1:length(cut.names_b))){
                                 diet.cont.var=cont.names_b[i],diet.cont.var_001=cont.names_001[i],
                                 diet.cont.var_002=cont.names_002[i],
                                 full.index.name=indices.names[i],df=nspore)$long.data
+  
+  comb.surv.plots[[i]]<-msm.func(diet.cut.var=cut.names_b[i],diet.cut.var_001=cut.names_001[i],
+                                 diet.cut.var_002=cut.names_002[i],
+                                 diet.cont.var=cont.names_b[i],diet.cont.var_001=cont.names_001[i],
+                                 diet.cont.var_002=cont.names_002[i],
+                                 full.index.name=indices.names[i],df=nspore)$surv.curv
   
   
 }
@@ -651,3 +658,7 @@ survplots_ca<-do.call('ggarrange',comb.surv.plots)
 survplots2_ca<-annotate_figure(survplots_ca,
                          top = text_grob("Adjusted Survival Curves: Cancer-Specific Mortality", 
                                          color = "black", size = 18,hjust=1.2,family = "Helvetica Light"))
+
+#save
+setwd('/Volumes/My Passport for Mac/Arthur Lab/Dietary Inflammatory Index/Analyses/Manuscript Write-ups/Figures')
+ggsave("adj_survcurvCA.jpeg",width = 30, height = 20, units = "cm")

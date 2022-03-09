@@ -662,6 +662,9 @@ survplots_ac<-do.call('ggarrange',comb.surv.plots)
 survplots2_ac<-annotate_figure(survplots_ac,
                 top = text_grob("Adjusted Survival Curves: All-Cause Mortality", 
                                 color = "black", size = 18,hjust=1.35,family = "Helvetica Light"))
+#save
+setwd('/Volumes/My Passport for Mac/Arthur Lab/Dietary Inflammatory Index/Analyses/Manuscript Write-ups/Figures')
+ggsave("adj_survcurvALLC.jpeg",width = 30, height = 20, units = "cm")
 
 
 
