@@ -28,3 +28,8 @@ Public repository of R code to reproduce analyses and figures in "Adherence to a
 `quantfunction.R`: Source code for function used in various analysis files (above).
 
 `surv_miner_bugfix_826`: Bug-fix for `survminer` package (this is required and used in `AC_mortality_analysis.R` and `CA_mortality_analysis.R` to generate adjusted survival curves.
+
+**Contact Us**:
+Email: cam17@illinois.edu
+Email: aarthur4@kumc.edu
+
