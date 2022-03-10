@@ -1,6 +1,8 @@
 # ap_Indices_Surv_HNSCC
 Public repository of R code to reproduce analyses and figures in "Adherence to a priori-defined Diet Quality Indices Throughout the Early Disease Course is Associated with Survival in Head and Neck Cancer Survivors: An Application Involving Marginal Structural Models"
 
+**Program Descriptions**:
+
 `diet_data_preproccess_score_calculations.R`: Code for conversion of raw dietary intake data to servings per day, computation of food groups, and, finally, computation of index scores utilized in the analyses.
 
 `imputations.R`: Code for imputing those with missing data. Imputed and non-imputed datasets are retained.
@@ -30,6 +32,7 @@ Public repository of R code to reproduce analyses and figures in "Adherence to a
 `surv_miner_bugfix_826`: Bug-fix for `survminer` package (this is required and used in `AC_mortality_analysis.R` and `CA_mortality_analysis.R` to generate adjusted survival curves.
 
 **Contact Us**:
+
 Email: cam17@illinois.edu
 Email: aarthur4@kumc.edu
 
