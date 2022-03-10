@@ -112,4 +112,8 @@ annotate_figure(ara2,left=text_grob("Index     \nQuintile",family = "Helvetica L
 
 ara2+annotate("text", x = 1, y = 1, label = "Group 1")
 
+#save
+setwd('/Volumes/My Passport for Mac/Arthur Lab/Dietary Inflammatory Index/Analyses/Manuscript Write-ups/Figures')
+ggsave("alluvial.jpeg",width = 30, height = 20, units = "cm")
+
 
